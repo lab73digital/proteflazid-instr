@@ -1,0 +1,204 @@
+@import "bourbon"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+    box-sizing: border-box
+
+a
+    text-decoration: none
+    &:-webkit-any-link
+        text-decoration: none
+html
+    font-size: calc(#{get-vw(16px/2)} + #{get-vh(16px/2)})
+
+body
+    //font-size: calc(#{get-vw(16px/2)} + #{get-vh(16px/2)})
+    font-size: 18px
+    position: relative
+    line-height: normal
+    //overflow: hidden
+    color: $c-black
+    font-family: $f-regular
+    font-weight: 300
+    max-width: 1000px
+    margin: 0 auto
+    background-color: #fff
+    background-repeat: no-repeat
+    background-position: center
+    padding: 0
+    border: 0
+    outline: none
+    -webkit-font-smoothing: subpixel-antialiased
+    //letter-spacing: .3px
+    //-webkit-user-select: none
+    //-moz-user-select: none
+    //-ms-user-select: none
+    //user-select: none
+h1
+    color: $c-green
+    text-align: center
+    text-transform: uppercase
+    font-size: 30px
+    font-weight: 800
+h2
+    color: $c-green
+    text-align: center
+    font-size: 28px
+    font-weight: 800
+h3
+    text-align: center
+    font-size: 18px
+    font-weight: 700
+.img-logo
+    margin: 30px auto 0
+    display: block
+.text-logo
+    color: $c-green
+    text-align: center
+    display: block
+    margin: 0 auto
+    font-size: 20px
+    font-weight: 300
+.prikaz
+    background-color: #ebebeb
+    text-align: center
+    p
+        font-size: 12px
+        color: #979797
+        padding: 5px
+.menu
+    width: 100%
+    border-top: solid 1px $c-green
+    border-bottom: solid 1px $c-green
+    ul
+        list-style: none
+        padding: 0
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        color: $c-green
+        font-size: 20px
+        font-weight: 300
+    li
+        cursor: pointer
+.sostav
+    background-image: url("../img/fon_1.jpg")
+    color: $c-white
+    padding: 20px 40px
+    background-repeat: no-repeat
+    h4
+        font-weight: 700
+        margin-bottom: 0
+    p
+        font-weight: 300
+.travka
+    float: right
+    display: flex
+    position: relative
+    &:before
+        content: "Deschampsia caespitosa"
+        position: absolute
+        bottom: 60px
+        left: -35px
+        font-size: 12px
+        font-weight: 300
+        max-width: 100px
+        text-align: center
+    &:after
+        content: "Calamagrostis epigeios"
+        position: absolute
+        bottom: 60px
+        left: 86%
+        font-size: 12px
+        font-weight: 300
+        max-width: 100px
+        text-align: center
+
+    &-1
+        margin-left: 20px
+    &-2
+        margin-right: 30px
+.lekar-forma
+    .left, .right
+        width: 50%
+        img
+            float: right
+            padding: 40px
+    display: flex
+    width: 100%
+    p
+        font-weight: 300
+        &:first-of-type
+            font-weight: 400
+        span
+            color: $c-green
+.hider
+    display: inline
+    color: $c-green
+    cursor: pointer
+.farmokinetika
+    h4
+        font-weight: 700
+    color: $c-white
+    padding: 30px 45% 30px 50px
+    background-image: url("../img/fon_2.jpg")
+.flex-row
+    display: flex
+.flex-item
+    width: 33%
+    position: relative
+    &:nth-of-type(2)
+        margin: 0 60px
+        position: relative
+    img.vagina
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        z-index: -1
+.figure-1
+    position: absolute
+    left: -40px
+    top: 45px
+    z-index: 1
+    &:after
+        content: "sdfsfddsf"
+        position: absolute
+        left: 50%
+        top: 100%
+        color: #004254
+.figure-11
+    position: absolute
+    left: 5px
+    top: 73px
+.figure-2
+    position: absolute
+    left: 34px
+    top: 143px
+    z-index: 1
+.figure-22
+    position: absolute
+    left: 60px
+    top: 123px
+.figure-3
+    position: absolute
+    left: 244px
+    top: 53px
+    z-index: 1
+.figure-33
+    position: absolute
+    left: 180px
+    top: 136px
+.figure-4
+    position: absolute
+    left: 200px
+    top: 153px
+    z-index: 1
+.figure-44
+    position: absolute
+    left: 180px
+    top: 84px
+
+@import "media"
+// Всегда в конце
