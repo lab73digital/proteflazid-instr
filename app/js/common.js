@@ -45,7 +45,10 @@ $(function () {
     menuTopOffset = menu.offsetTop + 30;
 
     window.onscroll = function () {
-        if (window.pageYOffset > menuTopOffset) {
+        if (window.innerWidth < 430) {
+            return
+        }
+        else if (window.pageYOffset > menuTopOffset) {
             menu.classList.add('menu--sticked');
         }
         else {
@@ -105,4 +108,29 @@ $(function () {
         offset: 300,
         reverse: false
     }).setTween(tween1).addTo(controller);
+    var tween2 = new TimelineMax().staggerFrom('.children-image', .4, {
+        ease: Power2.easeInOut,
+        opacity: 0,
+        x: -100
+    }, .2);
+    new ScrollMagic.Scene({
+        triggerElement: ".children",
+        triggerHook: 'onEnter',
+        offset: 300,
+        reverse: false
+    }).setTween(tween2).addTo(controller);
+    var tween3 = new TimelineMax().from('.car-animation-2', .4, {
+        ease: Power2.easeInOut,
+        opacity: 0,
+        rotation: -300
+    }).from('.car-animation-1', .4, {
+        ease: Power2.easeInOut,
+        opacity: 0
+    });
+    new ScrollMagic.Scene({
+        triggerElement: ".car",
+        triggerHook: 'onEnter',
+        offset: 300,
+        reverse: false
+    }).setTween(tween3).addTo(controller);
 });
